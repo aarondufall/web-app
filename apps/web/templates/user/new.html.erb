@@ -1,0 +1,34 @@
+<h1> Sign up </h1>
+<% unless params.valid? %>
+  <ul>
+    <% params.error_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= 
+form_for :signup, routes.signup_path do
+  div do
+    label :email
+    text_field :email 
+  end
+
+  div do 
+    label :username
+    text_field :username 
+  end
+
+  div do
+    label :password
+    password_field :password 
+  end
+    
+  div do
+    label :confirmation
+    password_field :password_confirmation 
+  end
+
+  submit 'Sign Up' 
+end 
+%>

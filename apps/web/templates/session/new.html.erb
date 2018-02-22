@@ -1,0 +1,23 @@
+<h1>Sign in</h1>
+
+<% if flash[:failed_notice] %>
+  <ul>
+    <li><%= flash[:failed_notice] %></li>
+  </ul>
+<% end %>
+
+<%= 
+form_for :signin, routes.signin_path do
+  div do
+    label :email
+    text_field :email 
+  end
+
+  div do
+    label :password
+    password_field :password 
+  end
+
+  submit 'Sign In' 
+end 
+%>
