@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/aarondufall/profile-component.git
-  revision: a8e3a6414a88172b4a2b78794fdca93409becc92
+  revision: cf84e418c7a7d597bb62a5a18a8d11adc406749c
   specs:
     profile-client (0.0.0)
       evt-configure
@@ -178,7 +178,7 @@ GEM
     naught (1.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
-    pg (0.21.0)
+    pg (1.0.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)

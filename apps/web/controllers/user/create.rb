@@ -23,11 +23,11 @@ module Web::Controllers::User
         )
 
         profile_id = user.id
-        name = params[:signup][:usernamename]
+        name = params[:signup][:username]
         # TODO add email uniqueness validation
         email = params[:signup][:email]
 
-        ProfileComponent::Commands::Initiate.(profile_id: profile_id, name: name, email: email)
+        Evt::Profile::Client::Initiate.(profile_id: profile_id, name: name, email: email)
         # Multi tenancy option Start organization with user uuid
         # Create user session
         warden.set_user user
